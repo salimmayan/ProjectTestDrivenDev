@@ -1,1 +1,1 @@
-// alert("hello world");
+import '../src/frontend.js'
