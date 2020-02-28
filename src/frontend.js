@@ -1,24 +1,12 @@
-export function Triangle(side1, side2, side3) {
-    console.log(side1, side2, side3);
-    this.side1 = side1;
-    this.side2 = side2;
-    this.side3 = side2;
-    debugger;
-}
+const characters = [];
 
-// Triangle.prototype.checkType = function () {
-//     return "not a triangle";
-// }
-
-Triangle.prototype.checkType = function() {
-    if ((this.side1 > (this.side2 + this.side3)) || (this.side2 > (this.side1 + this.side3)) || (this.side3 > (this.side1 + this.side2))) {
-      return "not a triangle";
-    } else if ((this.side1 !== this.side2) && ((this.side1 !== this.side3)) && ((this.side2 !== this.side3))) {
-      return "scalene triangle";
-    }  else if ((this.side1 === this.side2) && (this.side2 === this.side3)) {
-      return "equilateral triangle";
-    } else if ((this.side1 === this.side2) || ((this.side1 === this.side3)) || ((this.side2 === this.side3))) {
-        return "isosceles triangle";
+export class Warrior {
+    constructor(name, weapon, level) {
+        this.name = name;
+        this.weapon = weapon;
+        this.level = level;
+        let strength = 5;
+        let health = 10;
     }
-  };
+}
 

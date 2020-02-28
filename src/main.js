@@ -1,1 +1,2 @@
-import '../src/frontend.js'
+import '../src/frontend.js';
+

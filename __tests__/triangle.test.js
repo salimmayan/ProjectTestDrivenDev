@@ -1,38 +1,20 @@
-import { Triangle } from './../src/frontend.js';
+import { Warrior } from './../src/frontend.js';
 
-describe('Triangle', () => {
-    var reusableTriangle;
+describe('Warrior', () => {
+  var reuseableWarrior;
 
-    beforeEach(() => {
-        reusableTriangle = new Triangle(5, 5, 5);
-      });
+  beforeEach(() => {
+    reuseableWarrior = new Warrior("Dummy", "Pinata", 1);
+    expect(reuseableWarrior.name).toEqual("Dummy");
+    expect(reuseableWarrior.weapon).toEqual("Pinata");
+    expect(reuseableWarrior.level).toEqual(1);
+  });
 
-      test('should show how beforeEach() works', () => {
-        console.log(reusableTriangle);
-      });
-
-    test('should correctly create a triangle object with three lengths', () => {
-        reusableTriangle = new Triangle(2, 4, 5);
-        expect(reusableTriangle.side1).toEqual(2);
-        expect(reusableTriangle.side2).toEqual(4);
-        expect(reusableTriangle.side3).toEqual(5);
-    });
-
-
-
-    test('should correctly determine whether 3 lengths can be made into a triangle', () => {
-        reusableTriangle = new Triangle(3, 9, 22);
-        expect(reusableTriangle.checkType()).toEqual("not a triangle");
-    });
-
-    test('should correctly determine whether three lengths make a scalene triangle', function () {
-        reusableTriangle = new Triangle(4, 5, 7)
-        expect(reusableTriangle.checkType()).toEqual("scalene triangle");
-    });
-
-    test('should correctly determine whether three lengths make an isosceles triangle', () => {
-        reusableTriangle = new Triangle(5,5,7)
-        expect(reusableTriangle.checkType()).toEqual("isosceles triangle");
-      });
+  test('should correctly create a warrior object with a name, a weapon and a level', () => {
+    reuseableWarrior = new Warrior("Michael", "Axe", 10);
+    expect(reuseableWarrior.name).toEqual("Michael");
+    expect(reuseableWarrior.weapon).toEqual("Axe");
+    expect(reuseableWarrior.level).toEqual(10);
+  });
 
 });
