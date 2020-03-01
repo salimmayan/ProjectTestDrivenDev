@@ -1,23 +1,20 @@
-const characters = [];
-
+//const characters = [];
 
 export class Character {
-  constructor(name="NPC", weapon="Basic Sword", level=1, strength=5, health=20) {
+  constructor(name = "NPC", weapon = "Basic Sword", level = 1, health = 20, winCount = 0) {
     this.name = name;
     this.weapon = weapon;
     this.level = level;
-    this.strength = strength;
     this.health = health;
-    // this.currentId = currentId ++;
+    this.winCount = winCount;
   }
 }
 
 export class Warrior extends Character {
-  constructor(name, weapon) {
+  constructor(strength) {
     super();
-    this.name = name;
-    this.weapon = weapon;
-  }  
+    this.strength = strength;
+  }
 }
 
 export class Enemy extends Character {
@@ -27,8 +24,29 @@ export class Enemy extends Character {
   }
 }
 
-const computerNpcs = new Enemy(5);
-const usersWarrior = new Warrior("Michael", "Axe");
-console.log(computerNpcs);
-console.log(usersWarrior);
+//const computerNpcs = new Enemy(5);
+//const usersWarrior = new Warrior("Michael", "Axe");
+//console.log(computerNpcs);
+//console.log(usersWarrior);
 
+export class Fight {
+  constructor(Warrior) {
+    this.fighter1 = new Warrior();
+    this.fighter2 = new Warrior();
+  }
+  battle() {
+    let fighter1 = new Warrior(1);
+    let fighter2 = new Warrior(3);
+    if (fighter1.strength > fighter2.strength) {
+      fighter1.winCount++;
+      console.log(`Fighter1 wins`);
+    }
+    else {
+      fighter2.winCount++;
+      console.log(`Fighter2 wins`);
+    }
+  }
+}
+
+let fightStart = new Fight(Warrior);
+fightStart.battle();
