@@ -1,5 +1,6 @@
 const characters = [];
 
+// Base Character
 export class Character {
   constructor(name, weapon, level, health, winCount) {
     this.name = name;
@@ -8,44 +9,54 @@ export class Character {
     this.health = 20;
     this.winCount = 0;
   }
+  // Health reduction function
+  injuryCountFunc() {
+    return this.health - (Math.floor((Math.random() * 9))); //Generate Random no from 0 to 8
+  }
 }
 
+// Actual Fighters
 export class Warrior extends Character {
-  constructor(strength,name) {
+  constructor(strength, name) {
     super(name);
     this.strength = strength;
   }
 }
 
-let fighter1 = new Warrior(1, "Luke");
-let fighter2 = new Warrior(2, "Kent");
+export class Game {
+  constuctor () {
 
-characters.push(fighter1, fighter2);
-console.log(characters);
-
-export class Enemy extends Character {
-  constructor(hostility) {
-    super();
-    this.hostility = hostility;
+  }
+  displayBattleResults(Warrior) {
+    console.log(`${Warrior.name} wins`);
+    console.log(`winCount is ${Warrior.winCount}`);
+    console.log(`Health is ${Warrior.health}`);
   }
 }
 
-//const computerNpcs = new Enemy(5);
-//const usersWarrior = new Warrior("Michael", "Axe");
-//console.log(computerNpcs);
-//console.log(usersWarrior);
+// Fighter assignemnt
+let fighter1 = new Warrior(1, "Luke");
+let fighter2 = new Warrior(2, "Kent");
 
+// Push characters to our array
+characters.push(fighter1, fighter2);
+console.log(characters);
+
+// Fight class that manages the battle, and displays the results
 export class Fight {
   constructor() {
   }
-  battle() { 
+  battle() {
+    var game = new Game();
     if (fighter1.strength > fighter2.strength) {
       fighter1.winCount++;
-      console.log(`${fighter1} wins`);
+      fighter1.health = fighter1.injuryCountFunc();
+      game.displayBattleResults(fighter1);
     }
     else {
       fighter2.winCount++;
-      console.log(`${fighter2} wins`);
+      fighter2.health = fighter2.injuryCountFunc();
+      game.displayBattleResults(fighter2);
     }
   }
 }
