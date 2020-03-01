@@ -1,21 +1,27 @@
-//const characters = [];
+const characters = [];
 
 export class Character {
-  constructor(name = "NPC", weapon = "Basic Sword", level = 1, health = 20, winCount = 0) {
+  constructor(name, weapon, level, health, winCount) {
     this.name = name;
-    this.weapon = weapon;
-    this.level = level;
-    this.health = health;
-    this.winCount = winCount;
+    this.weapon = "Basic Sword";
+    this.level = 1;
+    this.health = 20;
+    this.winCount = 0;
   }
 }
 
 export class Warrior extends Character {
-  constructor(strength) {
-    super();
+  constructor(strength,name) {
+    super(name);
     this.strength = strength;
   }
 }
+
+let fighter1 = new Warrior(1, "Luke");
+let fighter2 = new Warrior(2, "Kent");
+
+characters.push(fighter1, fighter2);
+console.log(characters);
 
 export class Enemy extends Character {
   constructor(hostility) {
@@ -30,20 +36,16 @@ export class Enemy extends Character {
 //console.log(usersWarrior);
 
 export class Fight {
-  constructor(Warrior) {
-    this.fighter1 = new Warrior();
-    this.fighter2 = new Warrior();
+  constructor() {
   }
-  battle() {
-    let fighter1 = new Warrior(1);
-    let fighter2 = new Warrior(3);
+  battle() { 
     if (fighter1.strength > fighter2.strength) {
       fighter1.winCount++;
-      console.log(`Fighter1 wins`);
+      console.log(`${fighter1} wins`);
     }
     else {
       fighter2.winCount++;
-      console.log(`Fighter2 wins`);
+      console.log(`${fighter2} wins`);
     }
   }
 }
