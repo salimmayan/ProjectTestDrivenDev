@@ -1,39 +1,38 @@
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Semantic CSS -->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
-    <!-- jQuery CDN -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <!-- JavaScript Local Script Sheet -->
-    <title>Title Here</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Semantic CSS -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <!-- JavaScript Local Script Sheet -->
+  <title>Title Here</title>
 </head>
 <body>
-    <div class="container-ui">
-        <h1>Hello</h1>
-        <h1>Enter 3 sides of triangles</h1>
-        <div>
-          <form id="formOne">
-            <div class="form-group">
-              <label for="firstSide">Side-1</label>
-              <input required id="sideOne" class="form-control" type="number">
-            </div>
-            <div class="form-group">
-              <label  for="secondSide">Side-2</label>
-              <input required id="sideTwo" class="form-control" type="number">
-            </div>
-            <div class="form-group">
-              <label  for="thirdSide">Side-3</label>
-              <input required id="sideThree" class="form-control" type="number">
-            </div>
-  
-            <button type="submit" class="btn-primary">Submit</button>
-          </form>
+  <div class="container-ui">
+    <h1>Warrior Face-Off</h1>
+    <div>
+      <form id="formOne">
+        <label for="warriorCount">Select count of warriors</label>
+        <select id="warriorCount" name="warriorCount">
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        <button type="submit" class="btn-primary">Submit</button>
+      </form>
     </div>
-    
 </body>
 </html>

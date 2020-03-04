@@ -6,30 +6,25 @@ export class Fight {
   }
 
   // Start the fight!
-  battle(x, y) {
-    // x = new Warrior();
-    // y = new Warrior();   
+  battle(warrior1, warrior2) {
+    warrior1.health = warrior1.healthReducer(warrior1.strength);
+    warrior2.health = warrior2.healthReducer(warrior2.strength);
 
-    console.log(`FIGHT.JS: Calling healthReducer() for ${x.getName()}`);
-    x.health = x.healthReducer();
-    console.log(`FIGHT.JS: battle: health for ${x.getName()} is ${x.getHealth()}`);
-    console.log(`FIGHT.JS: Calling healthReducer() for ${y.getName()}`);
-    y.health = y.healthReducer();
-    console.log(`FIGHT.JS: battle: health for ${y.getName()} is ${y.getHealth()}`);
-
-    if (x.health > y.health) {
-      x.winCount++;
-      this.displayBattleResults(x);
+    if (warrior1.health > warrior2.health) {
+      warrior1.winCount++;
+      this.displayBattleResults(warrior1, "Winner ==> ");
+      this.displayBattleResults(warrior2, "Loser ==> ");
     }
     else {
-      y.winCount++;
-      this.displayBattleResults(y);
+      warrior2.winCount++;
+      this.displayBattleResults(warrior2, "Winner ==> ");
+      this.displayBattleResults(warrior1, "Loser ==> ");
     }
   }
 
   // Display fight results
-  displayBattleResults(z) {
-    console.log(`FIGHT.JS: For Winner ${z.getName()} Name:Weapon:Level:Health:WinCount:Strength::::::${z.getName()}:${z.getWeapon()}:${z.getLevel()}:${z.getHealth()}:${z.getWinCount()}:${z.strength}`);
+  displayBattleResults(objectName, message) {
+    console.log(`${message} Name:Weapon:Level:Health:WinCount:Strength::::::${objectName.getName()}:${objectName.getWeapon()}:${objectName.getLevel()}:${objectName.getHealth()}:${objectName.getWinCount()}:${objectName.strength}`);
   }
 
 }
