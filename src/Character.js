@@ -7,9 +7,10 @@ export class Character {
     this.health = 20;
     this.winCount = 0;
   }
+
   // Health reduction function
   healthReducer() {
-    let randomNumber = (Math.floor((Math.random() * 9)));
+    let randomNumber = (Math.floor((Math.random() * 9))); //Generate Random no from 0 to 8
     console.log(`Character:heathReducer()::Random number generated is ${randomNumber}`);
     return this.health - randomNumber; //Generate Random no from 0 to 8
   }

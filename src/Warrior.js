@@ -4,6 +4,6 @@ import { Character } from '../src/Character.js';
 export class Warrior extends Character {
   constructor(strength, name) {
     super(name);
-    this.strength = strength;
+    this.strength = strength; 
   }
 }

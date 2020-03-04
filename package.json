@@ -8,7 +8,7 @@
     "start": "npm run build & webpack-dev-server --open --mode development",
     "lint": "eslint src/*.js",
     "test": "jest",
-    "debug": "node --inspect node_modules/.bin/jest --runInBand"
+    "debug": "node --inspect-brk node_modules/jest/bin/jest --runInBand"
   },
   "keywords": [],
   "author": "",
