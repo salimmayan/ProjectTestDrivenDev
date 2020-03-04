@@ -29,7 +29,7 @@ $(document).ready(function () {
         let tmpStrength = 0;
         let tmpFighterName = "";
         let tmpWeapon = "";
-        
+
         for (let x = 0; x < warriorCount; x++) {
             tmpVariableName = "fighter" + x;
             tmpStrength = tmpCharacter.randomNoGenMax10();
@@ -38,5 +38,33 @@ $(document).ready(function () {
             tmpVariableName = new Warrior(tmpStrength, tmpFighterName, tmpWeapon);
             warriors.push(tmpVariableName);
         }
+        console.log(warriors);
+
+        let fight = new Fight();
+        console.log("We're starting the battle between " + warriors[0].name + " and " + warriors[1].name);
+        var loser = fight.battle(warriors[0], warriors[1]);
+        console.log("loser is " + loser);
+
+        console.log(warriors.length);
+        for (let i = 0; i < warriors.length; i++) {
+            //console.log("We're printing the ith warriors name: " + warriors[i].name);
+            if (warriors[i].name === loser) {
+                warriors.splice(i);
+               // console.log("Warrior name matched: " + warriors[i].name + " and index i " + i);
+            }
+        
+        }
+        
+        
+        for (let k = 0; k < warriors.length; k++) {
+            console.log("retained warrior is " + warriors[k].name);
+        }
+
+        // console.log(warriors.name);
+
+
+        // warriors.name.splice(['Randy']);
+
+
     });
 });

@@ -14,11 +14,16 @@ export class Fight {
       warrior1.winCount++;
       this.displayBattleResults(warrior1, "Winner ==> ");
       this.displayBattleResults(warrior2, "Loser ==> ");
+      return warrior2.name;
     }
-    else {
+    else if (warrior2.health > warrior1.health) {
       warrior2.winCount++;
       this.displayBattleResults(warrior2, "Winner ==> ");
       this.displayBattleResults(warrior1, "Loser ==> ");
+      return warrior1.name;
+    }
+    else {
+      console.log("THERE IS SOMETHING REALLY WRONG HERE!!!!");
     }
   }
 
