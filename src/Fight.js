@@ -5,12 +5,9 @@ export class Fight {
   constructor() {
   }
 
-
-
   // Start the fight!
   battle(warrior1, warrior2) {
-    var staleMate = false;    
-
+    var staleMate = false;
     warrior1.health = warrior1.healthReducer(warrior1.strength);
     warrior2.health = warrior2.healthReducer(warrior2.strength);
 
@@ -18,10 +15,10 @@ export class Fight {
       warrior1.winCount++;
       console.log(`Winner was Warrior1 - Warrior1.health:Warrior2.health::${warrior1.health}:${warrior2.health}`);
       this.displayBattleResults(warrior1, "Winner ==> ");
-      this.displayBattleResults(warrior2, "Loser ==> ");      
+      this.displayBattleResults(warrior2, "Loser ==> ");
       return warrior2;
     }
-    else if (warrior2.health > warrior1.healt) {
+    else if (warrior2.health > warrior1.health) {
       warrior2.winCount++;
       console.log(`Winner was Warrior2 - Warrior1.health:Warrior2.health::${warrior1.health}:${warrior2.health}`);
       this.displayBattleResults(warrior2, "Winner ==> ");

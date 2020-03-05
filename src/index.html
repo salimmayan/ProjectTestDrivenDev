@@ -12,11 +12,18 @@
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <!-- JavaScript Local Script Sheet -->
-  <title>Title Here</title>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+  <title>Warrior Game</title>
 </head>
+
 <body>
-  <div class="container-ui">
-    <h1>Warrior Face-Off</h1>
+  <div class="container">
+    </br>
+    <h1><span class="blueColor">Warrior Face-Off </span> </h1>
+    </br>
     <div>
       <form id="formOne">
         <label for="warriorCount">Select count of warriors</label>
@@ -31,8 +38,22 @@
           <option value="9">9</option>
           <option value="10">10</option>
         </select>
-        <button type="submit" class="btn-primary">Submit</button>
+        </br>
+        <button type="submit" id="submit" class="btn btn-success">Submit</button>
+        <button type="restart" id="restart" class="btn btn-danger">Refresh</button>
       </form>
     </div>
+
+    <div id="output">
+      <br>
+      <p class="mb-0">You choose <span id="dropDownSel"></span></p>
+      <blockquote class="blockquote">
+        <ul id="fighter"></ul>
+        <p>Winner is <span id="coralColor"></span></span> and Winners Score was <span
+            class="trueCoralColor"></span><span id="coralColor2"></span></span> </p>
+
+      </blockquote>
+    </div>
 </body>
+
 </html>

@@ -8,13 +8,11 @@ export class Character {
     this.winCount = 0;
   }
 
- // let chare  = new Character();
-
   // Health reduction function
   healthReducer(strength) {
-    let randomNumber = this.randomNoGen(9);(Math.floor((Math.random() * (9 + 1)))); //Generate Random no from 0 to 8
+    let randomNumber = this.randomNoGen(9); (Math.floor((Math.random() * (9 + 1)))); //Generate Random no from 0 to 8
     //console.log(`Character:heathReducer()::RandomNo:Warrior.Strength::${randomNumber}:${strength}`);
-    let hr= this.health - randomNumber + strength;
+    let hr = this.health - randomNumber + strength;
     return hr; //Generate Random no from 0 to 8
   }
 
@@ -24,21 +22,21 @@ export class Character {
   }
 
   selectTwoRandomNo(arrayWarriors, arraySize) {
-      let firstRandomNo = this.randomNoGen(arraySize-1);
-      let SecondRandomNo = this.randomNoGen(arraySize-1);
-      while (firstRandomNo === SecondRandomNo) {
-        SecondRandomNo = this.randomNoGen(arraySize-1);
-      }
-      let randomNumbers = [];
-      randomNumbers.push(firstRandomNo);
-      randomNumbers.push(SecondRandomNo);
-      return randomNumbers
-    
+    let firstRandomNo = this.randomNoGen(arraySize - 1);
+    let SecondRandomNo = this.randomNoGen(arraySize - 1);
+    while (firstRandomNo === SecondRandomNo) {
+      SecondRandomNo = this.randomNoGen(arraySize - 1);
+    }
+    let randomNumbers = [];
+    randomNumbers.push(firstRandomNo);
+    randomNumbers.push(SecondRandomNo);
+    return randomNumbers
   }
 
   getName() {
     return this.name;
   }
+
   getWeapon() {
     return this.weapon;
   }
@@ -46,9 +44,11 @@ export class Character {
   getLevel() {
     return this.level;
   }
+
   getHealth() {
     return this.health;
   }
+
   getWinCount() {
     return this.winCount;
   }

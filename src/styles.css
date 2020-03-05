@@ -1,0 +1,40 @@
+body {
+    background-color: whitesmoke;
+}
+
+#coralColor {
+    color: coral;
+    font-weight: 700;
+}
+
+.trueCoralColor {
+    color: coral;    
+}
+
+#coralColor2 {
+    color: coral;
+    font-weight: 700;
+}
+
+#winner {
+    display: none;
+}
+
+.blueColor {
+    color: blue;
+    font-weight: 700;
+}
+
+.greyColor {
+    color: coral;
+    font-weight: 700;
+}
+
+#output {
+    display: none;
+}
+
+#dropDownSel {
+    color: blue;
+    font-weight: 700;
+  }
