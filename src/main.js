@@ -1,9 +1,12 @@
 import { Fight } from '../src/Fight.js';
 import { Warrior } from '../src/Warrior.js';
 import { Character } from '../src/Character.js';
+import { BattleRecord } from '../src/BattleRecord.js';
+
 
 let arrayNames = ["Luke", "Kent", "Rueter", "Bob", "Jack", "Cindy", "Jane", "Michelle", "Randy", "Curtis"];
 let arrayWeapons = ["Axe", "Sword", "NinjaStarts", "Nunchucks", "Bow", "Wrench", "Samurai Sword", "Dagger", "Butter Knife", "Bad Sushi", "Sarcasm"];
+let numberOfPairings = 0;
 
 // Fighter Assignment
 $(document).ready(function () {
@@ -34,31 +37,42 @@ $(document).ready(function () {
         }
 
         console.log(`Before battle warriors:status::${temp}`);
-
+        
+        var battleRecordArray =[];
         while (warriors.length > 1) {
             let randomNumbers = [];
+            
             randomNumbers = objectCharacter.selectTwoRandomNo(warriors, warriors.length);
-            console.log(`Random numbers are ::${randomNumbers}`);
+            //console.log(`Random numbers are ::${randomNumbers}`);
 
             let fight = new Fight();
             var tempFighter1 = warriors[randomNumbers[0]];
             var tempFighter2 = warriors[randomNumbers[1]];
             var loser = fight.battle(tempFighter1, tempFighter2);
-            console.log("We're starting the battle between " + tempFighter1.name + " and " + tempFighter2.name);
+            console.log("Starting battle between " + tempFighter1.name + " and " + tempFighter2.name);
+            numberOfPairings++;
+            let battleRecord = new BattleRecord();
+            battleRecord.battleCount = numberOfPairings;
+            battleRecord.warriorObject1 = tempFighter1;
+            battleRecord.warriorObject2 = tempFighter2;           
+            
             if (loser !== false) {
                 loser.loserStatus = false;
+                battleRecord.result = loser.name;
                 console.log("Loser is " + loser.name);
             }
-
-            // loserStatusHash[loser] = true;
+            else if (loser === false){
+                battleRecord.result = "Draw";
+                console.log("Battle was a DRAW");
+            }           
 
             var removed;
-            console.log("Length of Warrior array before splicing is " + warriors.length + " and should be " + warriorCount);
+            //console.log("Length of Warrior array before splicing is " + warriors.length + " and should be " + warriorCount);
             for (let i = 0; i < warriors.length; i++) {
                 //console.log("We're printing the ith warriors name: " + warriors[i].name);
                 if (warriors[i].name === loser.name) {
                     warriors[i].loserStatus = true;
-                    console.log("SPLICING: Warrior name matched: " + warriors[i].name + " and index i " + i);
+                    //console.log("SPLICING: Warrior name matched: " + warriors[i].name + " and index i " + i);
                     removed = warriors.splice(i, 1);
                     //console.log("SPLICING: removed item name is: " + removed.name);
                     break;
@@ -74,9 +88,18 @@ $(document).ready(function () {
                 }
                 console.log(`After battle warriors:status::${tempNew}`);
             }
+            battleRecordArray.push(battleRecord);
+            //console.log(`battleRecord length is ${battleRecordArray.length}`);
         }
         console.log(`Winner is ${warriors[0].name} with health ${warriors[0].health}`);
+        //console.log(`battleRecord length is ${battleRecordArray.length}`);
+        for (let m = 0; m < battleRecordArray.length; m++) {
+            let temp3New = battleRecordArray[m].battleCount + ":" + battleRecordArray[m].warriorObject1.name  + ":" + battleRecordArray[m].warriorObject1.weapon + ":" + battleRecordArray[m].warriorObject1.level + ":" + battleRecordArray[m].warriorObject1.health + ":" + battleRecordArray[m].warriorObject1.winCount  + ":" + battleRecordArray[m].warriorObject1.strength  + ":" + battleRecordArray[m].warriorObject1.loserStatus + ":" + battleRecordArray[m].warriorObject2.name  + ":" + battleRecordArray[m].warriorObject2.weapon + ":" + battleRecordArray[m].warriorObject2.level + ":" + battleRecordArray[m].warriorObject2.health + ":" + battleRecordArray[m].warriorObject2.winCount  + ":" + battleRecordArray[m].warriorObject2.strength  + ":" + battleRecordArray[m].warriorObject2.loserStatus  + ":" + battleRecordArray[m].result;
+            console.log(`temp3New ${temp3New}`);
+       }
     });
+   
+    
 });
 
 

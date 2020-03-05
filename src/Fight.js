@@ -5,26 +5,33 @@ export class Fight {
   constructor() {
   }
 
+
+
   // Start the fight!
   battle(warrior1, warrior2) {
-    var staleMate = false;
+    var staleMate = false;    
+
     warrior1.health = warrior1.healthReducer(warrior1.strength);
     warrior2.health = warrior2.healthReducer(warrior2.strength);
 
     if (warrior1.health > warrior2.health) {
       warrior1.winCount++;
+      console.log(`Winner was Warrior1 - Warrior1.health:Warrior2.health::${warrior1.health}:${warrior2.health}`);
       this.displayBattleResults(warrior1, "Winner ==> ");
-      this.displayBattleResults(warrior2, "Loser ==> ");
+      this.displayBattleResults(warrior2, "Loser ==> ");      
       return warrior2;
     }
-    else if (warrior2.health > warrior1.healthwarrior2) {
+    else if (warrior2.health > warrior1.healt) {
       warrior2.winCount++;
+      console.log(`Winner was Warrior2 - Warrior1.health:Warrior2.health::${warrior1.health}:${warrior2.health}`);
       this.displayBattleResults(warrior2, "Winner ==> ");
       this.displayBattleResults(warrior1, "Loser ==> ");
       return warrior1;
     }
     else {
-      console.log(`THERE IS SOMETHING REALLY WRONG HERE - stale mate - !!!! - warrior1.health:warrior2.health::${warrior1.health}:${warrior1.health}`);
+      console.log(`No Winner - warrior1.health:warrior2.health::${warrior1.health}:${warrior2.health}`);
+      this.displayBattleResults(warrior1, "Draw ==> ");
+      this.displayBattleResults(warrior2, "Draw ==> ");
       return staleMate = false;
     }
   }

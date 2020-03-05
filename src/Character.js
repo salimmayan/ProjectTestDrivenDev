@@ -13,7 +13,7 @@ export class Character {
   // Health reduction function
   healthReducer(strength) {
     let randomNumber = this.randomNoGen(9);(Math.floor((Math.random() * (9 + 1)))); //Generate Random no from 0 to 8
-    console.log(`Character:heathReducer()::RandomNo:Warrior.Strength::${randomNumber}:${strength}`);
+    //console.log(`Character:heathReducer()::RandomNo:Warrior.Strength::${randomNumber}:${strength}`);
     let hr= this.health - randomNumber + strength;
     return hr; //Generate Random no from 0 to 8
   }
