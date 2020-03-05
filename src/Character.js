@@ -8,22 +8,32 @@ export class Character {
     this.winCount = 0;
   }
 
+ // let chare  = new Character();
+
   // Health reduction function
   healthReducer(strength) {
-    let randomNumber = (Math.floor((Math.random() * 9))); //Generate Random no from 0 to 8
-    //console.log(`Character:heathReducer()::RandomNo:Warrior.Strength::${randomNumber}:${strength}`);
-    return this.health - randomNumber  + strength; //Generate Random no from 0 to 8
+    let randomNumber = this.randomNoGen(9);(Math.floor((Math.random() * (9 + 1)))); //Generate Random no from 0 to 8
+    console.log(`Character:heathReducer()::RandomNo:Warrior.Strength::${randomNumber}:${strength}`);
+    let hr= this.health - randomNumber + strength;
+    return hr; //Generate Random no from 0 to 8
+  }
+
+  randomNoGen(max) {
+    let randomNumber = (Math.floor((Math.random() * (max + 1)))); //Generate Random no from 0 to 9
+    return randomNumber;
+  }
+
+  selectTwoRandomNo(arrayWarriors, arraySize) {
+      let firstRandomNo = this.randomNoGen(arraySize-1);
+      let SecondRandomNo = this.randomNoGen(arraySize-1);
+      while (firstRandomNo === SecondRandomNo) {
+        SecondRandomNo = this.randomNoGen(arraySize-1);
+      }
+      let randomNumbers = [];
+      randomNumbers.push(firstRandomNo);
+      randomNumbers.push(SecondRandomNo);
+      return randomNumbers
     
-  }
-
-  randomNoGenMax9 (){
-  let randomNumberMax9 = (Math.floor((Math.random() * 10))); //Generate Random no from 0 to 9
-  return randomNumberMax9;
-  }
-
-  randomNoGenMax10 (){
-  let randomNumberMax10 = (Math.floor((Math.random() * 11))); //Generate Random no from 0 to 10
-  return randomNumberMax10;
   }
 
   getName() {
