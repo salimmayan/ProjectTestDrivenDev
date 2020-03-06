@@ -15,7 +15,6 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
-
   <title>Warrior Game</title>
 </head>
 
@@ -26,32 +25,23 @@
     </br>
     <div>
       <form id="formOne">
-        <label for="warriorCount">Select count of warriors</label>
-        <select id="warriorCount" name="warriorCount">
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-        </select>
+        <div class="field">
+          <label for="warriorCount">Select count of warriors</label>
+          <input required type="number" id="warriorCount" name="warriorCount" min="2" max="100">
+        </div>
+
         </br>
         <button type="submit" id="submit" class="btn btn-success">Submit</button>
         <button type="restart" id="restart" class="btn btn-danger">Refresh</button>
       </form>
     </div>
-
     <div id="output">
       <br>
-      <p class="mb-0">You choose <span id="dropDownSel"></span></p>
+      <p class="mb-0">You chose <span id="dropDownSel"></span></p>
       <blockquote class="blockquote">
         <ul id="fighter"></ul>
-        <p>Winner is <span id="coralColor"></span></span> and Winners Score was <span
-            class="trueCoralColor"></span><span id="coralColor2"></span></span> </p>
-
+        <p>Winner is <span id="coralColor"></span></span> and Winners Score was <span id="coralColor2"></span></span>
+        </p>
       </blockquote>
     </div>
 </body>

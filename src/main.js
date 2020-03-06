@@ -7,9 +7,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 
 
-let arrayNames = ["Luke", "Kent", "Rueter", "Bob", "Jack", "Cindy", "Jane", "Michelle", "Randy", "Curtis"];
-let arrayWeapons = ["Axe", "Sword", "NinjaStarts", "Nunchucks", "Bow", "Wrench", "Samurai Sword", "Dagger", "Butter Knife", "Bad Sushi", "Sarcasm"];
-let numberOfPairings = 0;
+let arrayNames = ["Ada", "Adelia", "Alba", "Alessia", "Alma", "Amalia", "Amaris", "Angelica", "Ansel", "Antonina", "Arden", "Ari", "Artemis", "Arthur", "Asa", "Aurelius", "Azariah", "Bear", "Bram", "Cassia", "Cora", "Darcy", "Eira", "Elva", "Emil", "Faye", "Fia", "Fleur", "Gracia", "Henley", "Horatio", "Ione", "Ivo", "Jacinta", "Jericho", "Jessamy", "Juliette", "Keir", "Kit", "Koa", "Leopold", "Lev", "Lilia", "Linus", "Logan", "Lorcan", "Lucinda", "Magnus", "Maia", "Malachy", "Marisol", "Marlow", "Massimo", "Milana", "Millicent", "Niamh", "Nola", "November", "Olympia", "Ottoline", "Petra", "Quincy", "Rafferty", "Ramona", "Ren", "Renata", "Reverie", "Romilly", "Romy", "Roscoe", "Rowan", "Rowena", "Sabine", "Sasha", "Saul", "Sera", "Serafina", "Seth", "Tansy", "Teddy", "Tempest", "Teo", "Thelonious", "Thorin", "Urban", "Verity", "Veronica", "Vida", "Virgil", "Viviana", "Wilfred", "Winslow", "Wynn", "Xen", "Zahra", "Zephyr", "Ziggy", "Zion", "Ken", "Luke"];
+let arrayWeapons = ["Antiaircraft Gun", "Antitank Weapon", "Big Bertha", "Cannon", "French 75", "Vulcan Automatic Cannon", "Coastal Artillery", "German 88", "Maxim Machine Gun", "Mortar", "Panzerfaust", "Panzerschreck", "Paris Gun", "Schwarzlose Machine Gun", "Anthrax", "Plague", "Q Fever", "Ricin", "Smallpox", "Yellow Rain", "Adamsite", "Diphosgene", "Hydrogen Cyanide", "Lewisite", "Nerve Gas", "Phosgene", "Tear Gas", "Chloropicrin", "Bola", "Boomerang", "Bow And Arrow", "Crossbow", "Longbow", "Grapeshot", "Flamethrower", "Greek Fire", "Sling", "Spear", "Spear-Thrower", "Bayonet", "Club", "Dagger", "Halberd", "Lance", "Pike", "Quarterstaff", "Sabre", "Sword", "Tomahawk", "Depth Charge", "Dirty Bomb", "Grenade", "Improvised Explosive Device", "Mine", "Shrapnel", "Petn", "Rdx", "Trinitrotoluene (Tnt)", "Antiballistic Missile", "Icbm", "Lance Missile", "Peacekeeper Missile", "Minuteman Missile", "Nike Missile", "Polaris Missile", "Poseidon Missile", "Torpedo", "Trident Missile", "V-2 Missile", "Tomahawk", "V-1 Missile", "Bazooka", "Congreve Rocket", "Firearms", "Manual", "Air Gun", "Blowgun", "Blunderbuss", "Carbine", "Spencer Carbine", "Gatling Gun", "Handgun", "Pistol", "Revolver", "Derringer", "Harquebus", "Musket", "Rifle", "Dreyse Rifle", "Lee-Enfield Rifle", "Mauser Rifle", "Springfield Rifle", "Shotgun", "Handgun", "Pistol", "Semiautomatic Pistol", "Luger Pistol", "Revolver", "Rifle", "Sarcasm"];
+
 
 // Fighter Assignment
 $(document).ready(function () {
@@ -17,19 +17,20 @@ $(document).ready(function () {
         document.location.reload(true);       //Reload Page
     });
     $('#formOne').submit(function () {
-        event.preventDefault();
+        event.preventDefault();       
+       // $("#output").hide();
         // $("#winner").hide();
         var warriorCount;
         warriorCount = parseInt($('#warriorCount').val());
         console.log(`Warrior count is ${warriorCount}`);
         var warriors = [];
+        var battleRecordArray = [];
+        let numberOfPairings = 0;
         let tmpVariableName = "";
         let objectCharacter = new Character("name", "weapon", 1, 20, 0);
         let tmpStrength = 0;
         let tmpFighterName = "";
         let tmpWeapon = "";
-        //var loserStatusHash = {}; // var h = new Object(); // or just {}
-        //hash[‘Salim’] = 4;
         let temp = "";
         for (let x = 0; x < warriorCount; x++) {
             tmpVariableName = "fighter" + x;
@@ -42,7 +43,7 @@ $(document).ready(function () {
             temp = temp + ", " + temp2;
         }
         console.log(`Before battle warriors:status::${temp}`);
-        var battleRecordArray = [];
+
         while (warriors.length > 1) {
             let randomNumbers = [];
             randomNumbers = objectCharacter.selectTwoRandomNo(warriors, warriors.length);
@@ -51,7 +52,7 @@ $(document).ready(function () {
             var tempFighter1 = warriors[randomNumbers[0]];
             var tempFighter2 = warriors[randomNumbers[1]];
             var loser = fight.battle(tempFighter1, tempFighter2);
-            console.log("Starting battle between " + tempFighter1.name + " and " + tempFighter2.name);
+            //console.log("Starting battle between " + tempFighter1.name + " and " + tempFighter2.name);
             numberOfPairings++;
             let battleRecord = new BattleRecord();
             battleRecord.battleCount = numberOfPairings;
@@ -96,25 +97,26 @@ $(document).ready(function () {
             let temp3New = battleRecordArray[m].battleCount + ":" + battleRecordArray[m].warriorObject1.name + ":" + battleRecordArray[m].warriorObject1.weapon + ":" + battleRecordArray[m].warriorObject1.level + ":" + battleRecordArray[m].warriorObject1.health + ":" + battleRecordArray[m].warriorObject1.winCount + ":" + battleRecordArray[m].warriorObject1.strength + ":" + battleRecordArray[m].warriorObject1.loserStatus + ":" + battleRecordArray[m].warriorObject2.name + ":" + battleRecordArray[m].warriorObject2.weapon + ":" + battleRecordArray[m].warriorObject2.level + ":" + battleRecordArray[m].warriorObject2.health + ":" + battleRecordArray[m].warriorObject2.winCount + ":" + battleRecordArray[m].warriorObject2.strength + ":" + battleRecordArray[m].warriorObject2.loserStatus + ":" + battleRecordArray[m].result;
             console.log(`temp3New ${temp3New}`);
         }
+        //$("ul#fighter").empty().append("<li></li>");
         battleRecordArray.forEach(function (battle) {
             let test = "";
             if (battle.result !== "Draw") {
-                test = `Battle # <span class="greyColor">  ${battle.battleCount} </span> was between <span class="greyColor"> ${battle.warriorObject1.name} </span> and <span class="greyColor"> ${battle.warriorObject2.name} </span> whose health #'s were <span class="greyColor"> ${battle.warriorObject1.health} </span> and <span class="greyColor"> ${battle.warriorObject2.health} </span> respectively. Loser was <span class="greyColor"> ${battle.result} </span>`
+                test = `Battle # <span class="greyColor">  ${battle.battleCount} </span> was between <span class="greyColor"> ${battle.warriorObject1.name} </span> (weapon: <span class="greyColor">${battle.warriorObject1.weapon}</span>) and <span class="greyColor"> ${battle.warriorObject2.name} </span>  (weapon: <span class="greyColor">${battle.warriorObject2.weapon}</span>) whose health #'s were <span class="greyColor"> ${battle.warriorObject1.health} </span> and <span class="greyColor"> ${battle.warriorObject2.health}</span>, respectively. Loser was <span class="greyColor"> ${battle.result} </span>`
             }
             else {
-                test = `Battle # <span class="greyColor">  ${battle.battleCount} </span> was between <span class="greyColor"> ${battle.warriorObject1.name} </span> and <span class="greyColor"> ${battle.warriorObject2.name} </span> whose health #'s were <span class="greyColor"> ${battle.warriorObject1.health} </span> and <span class="greyColor"> ${battle.warriorObject2.health} </span> respectively. Result was a <span class="greyColor"> ${battle.result} </span>`
+                test = `Battle # <span class="greyColor">  ${battle.battleCount} </span> was between <span class="greyColor"> ${battle.warriorObject1.name} </span> (weapon: <span class="greyColor">${battle.warriorObject1.weapon}</span>) and <span class="greyColor"> ${battle.warriorObject2.name} </span>  (weapon: <span class="greyColor">${battle.warriorObject2.weapon}</span>) whose health #'s were <span class="greyColor"> ${battle.warriorObject1.health} </span> and <span class="greyColor"> ${battle.warriorObject2.health}</span>, respectively. Result was a <span class="greyColor"> ${battle.result} </span>`
             }
             $("ul#fighter").append("<li>" + test + "</li>");
         });
-        $("#dropDownSel").empty().append(warriorCount);
         $("#output").hide().show();
-        $("#winner").hide().show();
+        $("#dropDownSel").empty().append(warriorCount);
         $("#coralColor").empty().append(warriors[0].name);
         $("#coralColor2").empty().append(warriors[0].health);
         battleRecordArray = [];
         warriors = [];
-        console.log("warrior legnth:battleRecordArray length::" + warriors.length + ":" + battleRecordArray.length);
         
+        //console.log("warrior legnth:battleRecordArray length::" + warriors.length + ":" + battleRecordArray.length);
+
     });
 });
 
