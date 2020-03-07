@@ -1,7 +1,6 @@
 import { Calculator } from '../src/Calculator.js';
 import { LifeExpectancy } from '../src/LifeExpectancy.js';
 
-
 // Calculator Suite
 describe('Calculator', () => {
   var calculator;
@@ -9,7 +8,6 @@ describe('Calculator', () => {
 
   beforeEach(() => {
     calculator = new Calculator(0, 1, 2, 3, 4, 5);
-    // expect(reuseableWarrior.weapon).toEqual("Salim");
   });
 
   test('should correctly create a Calculator object with a ageOnMercury value initialized to 0', () => {
@@ -33,11 +31,11 @@ describe('Calculator', () => {
   });
 
   test('should correctly create a Calculator object and return a anything but null or undefined', () => {
-    expect(calculator.ageOnPlanets(35, [0.24, 0.62, 1, 1.88, 11.86])).toEqual(expect.anything());
+    expect(calculator.ageOnPlanets(35, planetsConvFactor)).toEqual(expect.anything());
   });
 
   test('should correctly create a Calculator object and return ages on all planets for inputted values', () => {
-    expect(calculator.ageOnPlanets(35, [0.24, 0.62, 1, 1.88, 11.86])).toEqual(expect.arrayContaining([145, 56, 35, 18, 2]));
+    expect(calculator.ageOnPlanets(35, planetsConvFactor)).toEqual(expect.arrayContaining([145, 56, 35, 18, 2]));
   });
 
   test('Create a Calculator object and return yearsRemaining for one Demographic on all planets (Current age < Life Expectancy)', () => {
@@ -50,7 +48,6 @@ describe('Calculator', () => {
     expect(calculator.yearsRemaining(65, [270, 104, 65, 34, 5], planetsConvFactor)).toEqual(expect.arrayContaining(expected));
   });
 });
-
 
 // LifeExpectancy Suite
 describe('LifeExpectancy', () => {
