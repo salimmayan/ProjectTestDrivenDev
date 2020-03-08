@@ -74,7 +74,7 @@ $(document).ready(function () {
                 textYearsLeft = ` (<span class="blueColor">Estimated Life Expectancy</span> based on <span class="goldColor">Gender/Demographic</span>: <span class="coralColor">${currentLE}</span>. Years lived beyond Expiry date: <span class="coralColor">${currentAge - currentLE}</span)`;
             }
             else if ((currentAge - currentLE) < 0) {
-                var negPos = Math.abs(currentAge - currentLE);
+                let negPos = Math.abs(currentAge - currentLE);
                 textYearsLeft = ` (<span class="blueColor">Estimated Life Expectancy</span> based on <span class="goldColor">Gender/Demographic</span>: <span class="coralColor">${currentLE}</span>. Years left to live: <span class="coralColor">${negPos}</span>)`;
             }
             else if ((currentAge - currentLE) === 0) {
