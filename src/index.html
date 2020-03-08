@@ -15,35 +15,49 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
-  <title>Warrior Game</title>
+  <title>Age Calculator</title>
 </head>
 
 <body>
   <div class="container">
-    </br>
-    <h1><span class="blueColor">Warrior Face-Off </span> </h1>
-    </br>
-    <div>
-      <form id="formOne">
+    <h1><span class="coralColor">Super Galactic Age Calculator</span> Page </h1>
+    <div class="jumbotron">
+      <!-- <img src="img/pizza.jpg" alt="A photo of a cute pizza slice." align = "right" height="110" width="110">       -->
+      <h2 id="anim">Enter your Age, Gender, and Demographic!</h2>
+      <form id="formOne" name="ageCalculator">
         <div class="field">
-          <label for="warriorCount">Select count of warriors</label>
-          <input required type="number" id="warriorCount" name="warriorCount" min="2" max="100">
+          <label for="age">Age</label>
+          <input id="age" required input type="number" name="age" min="1" step="1" />
         </div>
-
+        <br>
+        <label>Select Gender</label>
+        <select class="sex form-control">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+        <br>
+        <label>Select your Demographic</label>
+        <select class="demographic form-control">
+          <option value="american">American</option>
+          <option value="canadian">Canadian</option>
+          <option value="mexican">Mexican</option>
+          <option value="cuban">Cuban</option>
+        </select>
         </br>
         <button type="submit" id="submit" class="btn btn-success">Submit</button>
         <button type="restart" id="restart" class="btn btn-danger">Refresh</button>
-      </form>
     </div>
-    <div id="output">
-      <br>
-      <p class="mb-0">You chose <span id="dropDownSel"></span></p>
-      <blockquote class="blockquote">
-        <ul id="fighter"></ul>
-        <p>Winner is <span id="coralColor"></span></span> and Winners Score was <span id="coralColor2"></span></span>
-        </p>
-      </blockquote>
-    </div>
+    </form>
+  </div>
+  <div id="output">
+    <br>
+    <p class="mb-0"><h3>For your chosen <span class="goldColor">Earth Age</span><span class="blackColor"> : </span><span
+        class="goldColor">Gender</span><span class="blackColor"> : </span><span class="goldColor">Demographic</span><span
+        class="blackColor"> : : : </span><span id="ageDemoSex"></span></h3></p>
+    <blockquote class="blockquote">
+      <ul id="agePerPlanet"></ul>
+    </blockquote>
+  </div>
 </body>
 
 </html>

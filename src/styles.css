@@ -1,23 +1,13 @@
 body {
     background-color: whitesmoke;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size:small;
+    padding: 70px;
 }
 
-#coralColor {
+.coralColor {
     color: coral;
     font-weight: 700;
-}
-
-.trueCoralColor {
-    color: coral;    
-}
-
-#coralColor2 {
-    color: coral;
-    font-weight: 700;
-}
-
-#winner {
-    display: none;
 }
 
 .blueColor {
@@ -25,8 +15,18 @@ body {
     font-weight: 700;
 }
 
+.blackColor {
+    color: black;
+    font-weight: 700;
+}
+
 .greyColor {
-    color: coral;
+    color: grey;
+    font-weight: 700;
+}
+
+.goldColor {
+    color: gold;
     font-weight: 700;
 }
 
@@ -34,9 +34,10 @@ body {
     display: none;
 }
 
-#dropDownSel {
-    color: blue;
-    font-weight: 700;
+#agePerPlanet {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size:small;  
 }
+
 
 

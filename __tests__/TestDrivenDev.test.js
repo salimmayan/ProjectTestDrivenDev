@@ -64,53 +64,53 @@ describe('LifeExpectancy', () => {
     var lifeExpectancy = new LifeExpectancy([], [], []);
     const planetsConvFactor = [0.24, 0.62, 1.00, 1.88, 11.86];
     const constLifeExp = [65, 70, 65, 64];
-    expect(lifeExpectancy.lifeExpAllRaceAllPlanet("female", constLifeExp, planetsConvFactor)).toEqual(expect.anything());
+    expect(lifeExpectancy.lifeExpAllDemoAllPlanet("female", constLifeExp, planetsConvFactor)).toEqual(expect.anything());
   });
 
   test('should correctly create a LifeExpectancy object and return ages on all planets. Demographic:Sex:"american":"female"', () => {
-    lifeExpectancy.lifeExpAllRaceAllPlanet("female", constLifeExp, planetsConvFactor);
+    lifeExpectancy.lifeExpAllDemoAllPlanet("female", constLifeExp, planetsConvFactor);
     expect(lifeExpectancy.american).toEqual(expect.arrayContaining([300, 116, 72, 38, 6]));
     console.log("expected is " + expected);
   });
 
   test('should correctly create a LifeExpectancy object and return ages on all planets. Demographic:Sex:"canadian":"female"', () => {
-    lifeExpectancy.lifeExpAllRaceAllPlanet("female", constLifeExp, planetsConvFactor);
+    lifeExpectancy.lifeExpAllDemoAllPlanet("female", constLifeExp, planetsConvFactor);
     expect(lifeExpectancy.canadian).toEqual(expect.arrayContaining([320, 124, 77, 40, 6]));
     console.log("expected is " + expected);
   });
 
   test('should correctly create a LifeExpectancy object and return ages on all planets. Demographic:Sex:"mexican":"female"', () => {
-    lifeExpectancy.lifeExpAllRaceAllPlanet("female", constLifeExp, planetsConvFactor);
+    lifeExpectancy.lifeExpAllDemoAllPlanet("female", constLifeExp, planetsConvFactor);
     expect(lifeExpectancy.mexican).toEqual(expect.arrayContaining([300, 116, 72, 38, 6]));
     console.log("expected is " + expected);
   });
 
   test('should correctly create a LifeExpectancy object and return ages on all planets. Demographic:Sex:"cuban":"female"', () => {
-    lifeExpectancy.lifeExpAllRaceAllPlanet("female", constLifeExp, planetsConvFactor);
+    lifeExpectancy.lifeExpAllDemoAllPlanet("female", constLifeExp, planetsConvFactor);
     expect(lifeExpectancy.cuban).toEqual(expect.arrayContaining([295, 114, 71, 37, 5]));
     console.log("expected is " + expected);
   });
 
   test('should correctly create a LifeExpectancy object and return ages on all planets. Demographic:Sex:"american":"male"', () => {
-    lifeExpectancy.lifeExpAllRaceAllPlanet("male", constLifeExp, planetsConvFactor);
+    lifeExpectancy.lifeExpAllDemoAllPlanet("male", constLifeExp, planetsConvFactor);
     expect(lifeExpectancy.american).toEqual(expect.arrayContaining([270, 104, 65, 34, 5]));
     console.log("expected is " + expected);
   });
 
   test('should correctly create a LifeExpectancy object and return ages on all planets. Demographic:Sex:"canadian":"male"', () => {
-    lifeExpectancy.lifeExpAllRaceAllPlanet("male", constLifeExp, planetsConvFactor);
+    lifeExpectancy.lifeExpAllDemoAllPlanet("male", constLifeExp, planetsConvFactor);
     expect(lifeExpectancy.canadian).toEqual(expect.arrayContaining([291, 112, 70, 37, 5]));
     console.log("expected is " + expected);
   });
 
   test('should correctly create a LifeExpectancy object and return ages on all planets. Demographic:Sex:"mexican":"male"', () => {
-    lifeExpectancy.lifeExpAllRaceAllPlanet("male", constLifeExp, planetsConvFactor);
+    lifeExpectancy.lifeExpAllDemoAllPlanet("male", constLifeExp, planetsConvFactor);
     expect(lifeExpectancy.mexican).toEqual(expect.arrayContaining([270, 104, 65, 34, 5]));
     console.log("expected is " + expected);
   });
 
   test('should correctly create a LifeExpectancy object and return ages on all planets. Demographic:Sex:"cuban":"male"', () => {
-    lifeExpectancy.lifeExpAllRaceAllPlanet("male", constLifeExp, planetsConvFactor);
+    lifeExpectancy.lifeExpAllDemoAllPlanet("male", constLifeExp, planetsConvFactor);
     expect(lifeExpectancy.cuban).toEqual(expect.arrayContaining([266, 103, 64, 34, 5]));
     console.log("expected is " + expected);
   });

@@ -5,8 +5,8 @@ export class Calculator {
         this.ageOnEarth = ageOnEarth;
         this.ageOnMars = ageOnMars;
         this.ageOnJupiter = ageOnJupiter;
-
     }
+
     ageOnPlanets(userInputAge, planetsConvFactor) {
         let ageOnMercury = (Math.floor(userInputAge / planetsConvFactor[0]));
         let ageOnVenus = (Math.floor(userInputAge / planetsConvFactor[1]));
@@ -18,15 +18,14 @@ export class Calculator {
         return planetAgeArray;
     }
 
-
     yearsRemaining(currentAge, lifeExpectancy, planetsConvFactor) {// array will have age for 5 planets for asian like me
         let yearsLeft = [];
         let planetsAgeArray = [];
         planetsAgeArray = this.ageOnPlanets(currentAge, planetsConvFactor);
-        console.log(`Inside yearsReamining: planetsAgeArray is ${planetsAgeArray}`);
+        //console.log(`Inside yearsReamining: planetsAgeArray is ${planetsAgeArray}`);
         if (planetsAgeArray[2] > lifeExpectancy[2]) { //age greater then LE
             for (let planetAge = 0; planetAge < planetsAgeArray.length; planetAge++) {
-                yearsLeft.push(lifeExpectancy[planetAge] - planetsAgeArray[planetAge]); 
+                yearsLeft.push(lifeExpectancy[planetAge] - planetsAgeArray[planetAge]);
             }
         }
         else if (planetsAgeArray[2] < lifeExpectancy[2]) { //age less then LE
@@ -36,13 +35,11 @@ export class Calculator {
         }
         if (planetsAgeArray[2] === lifeExpectancy[2]) { //age equal to LE
             for (let planetAge = 0; planetAge < planetsAgeArray.length; planetAge++) {
-                yearsLeft.push(lifeExpectancy[planetAge] - planetsAgeArray[planetAge]); 
+                yearsLeft.push(lifeExpectancy[planetAge] - planetsAgeArray[planetAge]);
             }
         }
         return yearsLeft;
-
     }
-
 }
 
 

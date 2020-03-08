@@ -6,7 +6,7 @@ export class LifeExpectancy {  //when below fucn is called via object, the objec
         this.cuban = cuban;
     }
 
-    lifeExpAllRaceAllPlanet(sex, constLifeExp, planetsConvFactor) { // Life exp for ONE demographics on A;; planets
+    lifeExpAllDemoAllPlanet(sex, constLifeExp, planetsConvFactor) { // Life exp for ONE demographics on A;; planets
         let lifeExpCorrection = 0;	//const?	
         if (sex === "female") {
             lifeExpCorrection += 7;
@@ -19,19 +19,15 @@ export class LifeExpectancy {  //when below fucn is called via object, the objec
             switch (country) {
                 case 0:
                     this.american = oneRaceAllPlanetLifeExp;
-                    console.log(`In case 0 of Switch statement ${this.american}`);
                     break;
                 case 1:
                     this.canadian = oneRaceAllPlanetLifeExp;
-                    console.log(`In case 1 of Switch statement ${this.canadian}`);
                     break;
                 case 2:
                     this.mexican = oneRaceAllPlanetLifeExp;
-                    console.log(`In case 2 of Switch statement ${this.mexican}`);
                     break;
                 case 3:
                     this.cuban = oneRaceAllPlanetLifeExp;
-                    console.log(`In case 3 of Switch statement ${this.american}`);
                     break;
             }
         }
