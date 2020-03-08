@@ -69,7 +69,7 @@ $(document).ready(function () {
                     currentAge = planetAgeArray[planet];
                     break;
             }
-            let textYourAge = `Your Age in <span class="coralColor">${currentPlanet}</span> is <span class="coralColor">${planetAgeArray[planet]}</span>`;
+            let textYourAge = `Your Age on <span class="coralColor">${currentPlanet}</span> is <span class="coralColor">${planetAgeArray[planet]}</span>`;
             if ((currentAge - currentLE) > 0) {
                 textYearsLeft = ` (<span class="blueColor">Estimated Life Expectancy</span> based on <span class="goldColor">Gender/Demographic</span>: <span class="coralColor">${currentLE}</span>. Years lived beyond Expiry date: <span class="coralColor">${currentAge - currentLE}</span)`;
             }

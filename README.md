@@ -24,28 +24,28 @@ _**Example:**_ If a user enter Age in Mandatory `Age` field, choose `Gender'`as 
 
 ### For your chosen  `Earth Age` : `Gender` : `Demographic` : : : `45`  :  `Male`  :  `American`
 
-> -   Your Age in  `Mercury`  is  `187`  (Estimated `Life Expectancy`  based on  Gender/Demographic:  `270`. `Years left to live`:  `83`)
-> -   Your Age in  `Venus`  is  `72`  (Estimated `Life Expectancy`  based on  Gender/Demographic:  `104`. `Years left to live`:  `32`)
-> -   Your Age in  `Earth`  is  `45`  (Estimated `Life Expectancy`  based on  Gender/Demographic:  `65`. `Years left to live`:  `20`)
-> -   Your Age in  `Mars`  is  `23`  (Estimated `Life Expectancy`  based on  Gender/Demographic:  `34`. `Years left to live`:  `11`)
+> -   Your Age on  `Mercury`  is  `187`  (Estimated `Life Expectancy`  based on  Gender/Demographic:  `270`. `Years left to live`:  `83`)
+> -   Your Age on  `Venus`  is  `72`  (Estimated `Life Expectancy`  based on  Gender/Demographic:  `104`. `Years left to live`:  `32`)
+> -   Your Age on  `Earth`  is  `45`  (Estimated `Life Expectancy`  based on  Gender/Demographic:  `65`. `Years left to live`:  `20`)
+> -   Your Age on  `Mars`  is  `23`  (Estimated `Life Expectancy`  based on  Gender/Demographic:  `34`. `Years left to live`:  `11`)
 
 _**Example:**_ If a user enter Age in Mandatory `Age` field, choose `Gender'`as `Male`from drop down, choose `Demographic'`as `American`from drop down, and `Submit`, the program shall display below content
 
 ### For your chosen  `Earth Age` : `Gender` : `Demographic` : : : `65`  :  `Male`  :  `American`
 
-> -   Your Age in  `Mercury`  is  `270`  (Estimated `Life Expectancy`  based on  Gender/Demographic:  `270`. Regret to inform you will `kick the bucket` someday this year)
-> -   Your Age in  `Venus`  is  `104`  (Estimated `Life Expectancy`  based on  Gender/Demographic:  `104`. Regret to inform you will `kick the bucket` someday this year)
-> -   Your Age in  `Earth`  is  `65`  (Estimated `Life Expectancy`  based on  Gender/Demographic:  `65`. Regret to inform you will `kick the bucket` someday this year)
-> -   Your Age in  `Mars`  is  `34`  (Estimated `Life Expectancy`  based on  Gender/Demographic:  `34`. Regret to inform you will `kick the bucket` someday this year)
-> -   Your Age in  `Jupiter`  is  `5`  (Estimated `Life Expectancy`  based on  Gender/Demographic:  `5`. Regret to inform you will `kick the bucket` someday this year)
+> -   Your Age on  `Mercury`  is  `270`  (Estimated `Life Expectancy`  based on  Gender/Demographic:  `270`. Regret to inform you will `kick the bucket` someday this year)
+> -   Your Age on  `Venus`  is  `104`  (Estimated `Life Expectancy`  based on  Gender/Demographic:  `104`. Regret to inform you will `kick the bucket` someday this year)
+> -   Your Age on  `Earth`  is  `65`  (Estimated `Life Expectancy`  based on  Gender/Demographic:  `65`. Regret to inform you will `kick the bucket` someday this year)
+> -   Your Age on  `Mars`  is  `34`  (Estimated `Life Expectancy`  based on  Gender/Demographic:  `34`. Regret to inform you will `kick the bucket` someday this year)
+> -   Your Age on  `Jupiter`  is  `5`  (Estimated `Life Expectancy`  based on  Gender/Demographic:  `5`. Regret to inform you will `kick the bucket` someday this year)
 
 ### For your chosen  `Earth Age` : `Gender` : `Demographic` : : : `87`  :  `Male`  :  `American`
 
-> -   Your Age in  `Mercury`  is  `362`  (Estimated Life Expectancy  based on  Gender/Demographic:  `270`. Years lived beyond `Expiry date`:  `92`
-> -   Your Age in  `Venus`  is  `140`  (Estimated Life Expectancy  based on  Gender/Demographic:  `10`4. Years lived beyond `Expiry date`:  `36`
-> -   Your Age in  `Earth`  is  `87`  (Estimated `Life Expectancy`  based on  Gender/Demographic:  `65`. Years lived beyond `Expiry date`:  `22`
-> -   Your Age in  `Mars`  is  `46`  (Estimated `Life Expectancy`  based on  Gender/Demographic:  `34`. Years lived beyond `Expiry date`:  `12`
-> -   Your Age in  `Jupiter`  is  `7`  (Estimated `Life Expectancy`  based on  Gender/Demographic:  `5`. Years lived beyond `Expiry date`:  `2`
+> -   Your Age on  `Mercury`  is  `362`  (Estimated Life Expectancy  based on  Gender/Demographic:  `270`. Years lived beyond `Expiry date`:  `92`
+> -   Your Age on  `Venus`  is  `140`  (Estimated Life Expectancy  based on  Gender/Demographic:  `10`4. Years lived beyond `Expiry date`:  `36`
+> -   Your Age on  `Earth`  is  `87`  (Estimated `Life Expectancy`  based on  Gender/Demographic:  `65`. Years lived beyond `Expiry date`:  `22`
+> -   Your Age on  `Mars`  is  `46`  (Estimated `Life Expectancy`  based on  Gender/Demographic:  `34`. Years lived beyond `Expiry date`:  `12`
+> -   Your Age on  `Jupiter`  is  `7`  (Estimated `Life Expectancy`  based on  Gender/Demographic:  `5`. Years lived beyond `Expiry date`:  `2`
 
 ### Specs
 
