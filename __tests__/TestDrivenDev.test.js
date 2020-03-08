@@ -60,6 +60,22 @@ describe('LifeExpectancy', () => {
     lifeExpectancy = new LifeExpectancy([11, 12, 13], [14, 15, 16], [17, 18, 19], [20, 21, 22]);
   });
 
+  test('should correctly create a LifeExpectancy object with property "american" initialized to assinged value', () => {
+    expect(lifeExpectancy.american).toEqual(expect.arrayContaining([11, 12, 13]));
+  });
+
+  test('should correctly create a LifeExpectancy object with property "american" initialized to assinged value', () => {
+    expect(lifeExpectancy.canadian).toEqual(expect.arrayContaining([14, 15, 16]));
+  });
+
+  test('should correctly create a LifeExpectancy object with property "american" initialized to assinged value', () => {
+    expect(lifeExpectancy.mexican).toEqual(expect.arrayContaining([17, 18, 19]));
+  });
+
+  test('should correctly create a LifeExpectancy object with property "american" initialized to assinged value', () => {
+    expect(lifeExpectancy.cuban).toEqual(expect.arrayContaining([20, 21, 22]));
+  });
+
   test('should correctly create a LifeExpectancy object and return a anything but null or undefined', () => {
     var lifeExpectancy = new LifeExpectancy([], [], []);
     const planetsConvFactor = [0.24, 0.62, 1.00, 1.88, 11.86];
@@ -70,49 +86,40 @@ describe('LifeExpectancy', () => {
   test('should correctly create a LifeExpectancy object and return ages on all planets. Demographic:Sex:"american":"female"', () => {
     lifeExpectancy.lifeExpAllDemoAllPlanet("female", constLifeExp, planetsConvFactor);
     expect(lifeExpectancy.american).toEqual(expect.arrayContaining([300, 116, 72, 38, 6]));
-    console.log("expected is " + expected);
   });
 
   test('should correctly create a LifeExpectancy object and return ages on all planets. Demographic:Sex:"canadian":"female"', () => {
     lifeExpectancy.lifeExpAllDemoAllPlanet("female", constLifeExp, planetsConvFactor);
     expect(lifeExpectancy.canadian).toEqual(expect.arrayContaining([320, 124, 77, 40, 6]));
-    console.log("expected is " + expected);
   });
 
   test('should correctly create a LifeExpectancy object and return ages on all planets. Demographic:Sex:"mexican":"female"', () => {
     lifeExpectancy.lifeExpAllDemoAllPlanet("female", constLifeExp, planetsConvFactor);
     expect(lifeExpectancy.mexican).toEqual(expect.arrayContaining([300, 116, 72, 38, 6]));
-    console.log("expected is " + expected);
   });
 
   test('should correctly create a LifeExpectancy object and return ages on all planets. Demographic:Sex:"cuban":"female"', () => {
     lifeExpectancy.lifeExpAllDemoAllPlanet("female", constLifeExp, planetsConvFactor);
     expect(lifeExpectancy.cuban).toEqual(expect.arrayContaining([295, 114, 71, 37, 5]));
-    console.log("expected is " + expected);
   });
 
   test('should correctly create a LifeExpectancy object and return ages on all planets. Demographic:Sex:"american":"male"', () => {
     lifeExpectancy.lifeExpAllDemoAllPlanet("male", constLifeExp, planetsConvFactor);
     expect(lifeExpectancy.american).toEqual(expect.arrayContaining([270, 104, 65, 34, 5]));
-    console.log("expected is " + expected);
   });
 
   test('should correctly create a LifeExpectancy object and return ages on all planets. Demographic:Sex:"canadian":"male"', () => {
     lifeExpectancy.lifeExpAllDemoAllPlanet("male", constLifeExp, planetsConvFactor);
     expect(lifeExpectancy.canadian).toEqual(expect.arrayContaining([291, 112, 70, 37, 5]));
-    console.log("expected is " + expected);
   });
 
   test('should correctly create a LifeExpectancy object and return ages on all planets. Demographic:Sex:"mexican":"male"', () => {
     lifeExpectancy.lifeExpAllDemoAllPlanet("male", constLifeExp, planetsConvFactor);
     expect(lifeExpectancy.mexican).toEqual(expect.arrayContaining([270, 104, 65, 34, 5]));
-    console.log("expected is " + expected);
   });
 
   test('should correctly create a LifeExpectancy object and return ages on all planets. Demographic:Sex:"cuban":"male"', () => {
     lifeExpectancy.lifeExpAllDemoAllPlanet("male", constLifeExp, planetsConvFactor);
     expect(lifeExpectancy.cuban).toEqual(expect.arrayContaining([266, 103, 64, 34, 5]));
-    console.log("expected is " + expected);
   });
-
 });
