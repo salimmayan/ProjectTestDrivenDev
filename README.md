@@ -1,5 +1,5 @@
 # Super Galactic Age Calculator
-#### A web application that will take a person’s _Age_ in years, _Gender_, and _Demographic_ and return various attributes of Age relative to other planets. A TDD spec was committed _before_ writing associated method and thus ensuring adherence to the _Red, Green, Refactor_ workflow. At least one test was created for each spec and no test had more than one expectation. Application returns the following ...
+#### A web application that will take a person’s _Age_ in years, _Gender_, and _Demographic_ and return various attributes of Age relative to other planets. A TDD spec was committed _before_ writing associated method thus ensuring adherence to the _Red, Green, Refactor_ workflow. At least one test was created for each spec and no test had more than one expectation. Application returns the following ...
 -  Age in `Mercury years`
 -  Age in `Venus years`
 -  Age in `Mars years`
