@@ -1,8 +1,4 @@
-# Pizza Parlor
-#### A web application for a Pizza company where a user can choose one or more individual toppings (upto seven : Mushrooms, Kosher, Meat, Onions, Sausage, Bacon, Green Peppers, and Black Peppers) and a size (upto 4: Small, Medium, Large, and Extra Large) to order a pizza and see the final cost.
-
-# ### Super Galactic Age Calculator
-
+# Super Galactic Age Calculator
 #### A web application that will take a person’s _Age_ in years, _Gender_, and _Demographic_ and return various attributes of Age relative to other planets. A TDD spec was committed _before_ writing associated method and thus ensuring adherence to the _Red, Green, Refactor_ workflow. At least one test was created for each spec and no test had more than one expectation. Application returns the following ...
 -  Age in `Mercury years`
 -  Age in `Venus years`
