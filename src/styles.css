@@ -3,6 +3,10 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     font-size:small;
     padding: 70px;
+    /* background: url(http://nahj2018.org/wp-content/uploads/2020/01/coloring-book-pages-solar-system-birds-for-adults-designs-cute-halloween-awesome-pig-toddlers-creative-dinosaur-haven-crayola-inappropriate-drawings-spiderman-paper-enchanted-forest.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* opacity: 0.5; */
 }
 
 .coralColor {
