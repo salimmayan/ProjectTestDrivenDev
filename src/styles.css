@@ -12,7 +12,6 @@ body {
 h1, p, ul, li {
     font-family: 'Indie Flower', cursive;
     font-weight: 700;
-    padding-left: 4%;
 }
 
 h2 {
@@ -24,12 +23,15 @@ h2 {
 h3 {
     font-family: 'Indie Flower', cursive;
     font-weight: 700;
-    padding-left: 2%;
+    padding-left: 2.2%;
 }
 .coralColor {
     color: coral;
     font-family: 'Indie Flower', cursive;
     font-weight: 700;
+    margin: auto;
+    padding:auto;
+    text-align: center;
 }
 
 .blueColor {
