@@ -1,7 +1,8 @@
 body {
     background-color: whitesmoke;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size:small;
+   /*  font-family: -apple-system, BlinkMacSystemFont, sans-serif; */
+    font-family: 'Indie Flower', cursive;
+    font-size:medium;
     padding: 70px;
     /* background: url(http://nahj2018.org/wp-content/uploads/2020/01/coloring-book-pages-solar-system-birds-for-adults-designs-cute-halloween-awesome-pig-toddlers-creative-dinosaur-haven-crayola-inappropriate-drawings-spiderman-paper-enchanted-forest.jpg); */
     background-repeat: no-repeat;
@@ -9,38 +10,49 @@ body {
     /* opacity: 0.5; */
 }
 
+h1, h2, h3, p, ul, li{
+    font-family: 'Indie Flower', cursive;
+    font-weight: 700;
+}
 .coralColor {
     color: coral;
+    font-family: 'Indie Flower', cursive;
     font-weight: 700;
 }
 
 .blueColor {
+    font-family: 'Indie Flower', cursive;
     color: blue;
     font-weight: 700;
 }
 
 .blackColor {
+    font-family: 'Indie Flower', cursive;
     color: black;
     font-weight: 700;
 }
 
 .greyColor {
+    font-family: 'Indie Flower', cursive;
     color: grey;
     font-weight: 700;
 }
 
 .goldColor {
+    font-family: 'Indie Flower', cursive;
     color: gold;
     font-weight: 700;
 }
 
 #output {
+    font-family: 'Indie Flower', cursive;
     display: none;
 }
 
 #agePerPlanet {
+    font-family: 'Indie Flower', cursive;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size:small;  
+    font-size:medium;  
 }
 
 

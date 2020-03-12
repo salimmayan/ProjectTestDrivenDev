@@ -15,6 +15,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
   <title>Age Calculator</title>
 </head>
 
@@ -23,11 +24,11 @@
     <h1><span class="coralColor">Super Galactic Age Calculator</span> Page </h1>
     <div class="jumbotron">
       <!-- <img src="img/pizza.jpg" alt="A photo of a cute pizza slice." align = "right" height="110" width="110">       -->
-      <h2 id="anim">Enter your Age, Gender, and Demographic!</h2>
+      <h2>Enter your Age, Gender, and Demographic!</h2>
       <form id="formOne" name="ageCalculator">
         <div class="field">
           <label for="age">Age</label>
-          <input id="age" required input type="number" name="age" min="1" step="1" placeholder = "Enter Age" />
+          <input id="age" required input type="number" name="age" min="1" step="1" placeholder="Enter Age" />
         </div>
         <br>
         <label>Select Gender</label>
@@ -51,9 +52,11 @@
   </div>
   <div id="output">
     <br>
-    <p class="mb-0"><h3>For your chosen <span class="goldColor">Earth Age</span><span class="blackColor"> : </span><span
-        class="goldColor">Gender</span><span class="blackColor"> : </span><span class="goldColor">Demographic</span><span
-        class="blackColor"> : : : </span><span id="ageDemoSex"></span></h3></p>
+    <p class="mb-0">
+      <h3>For your chosen <span class="goldColor">Earth Age</span><span class="blackColor"> : </span><span
+          class="goldColor">Gender</span><span class="blackColor"> : </span><span
+          class="goldColor">Demographic</span><span class="blackColor"> : : : </span><span id="ageDemoSex"></span></h3>
+    </p>
     <blockquote class="blockquote">
       <ul id="agePerPlanet"></ul>
     </blockquote>
