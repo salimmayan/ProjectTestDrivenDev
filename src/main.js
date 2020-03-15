@@ -6,10 +6,14 @@ import './styles.css';
 
 // Everything below this line is the user interface (or front-end) logic:
 $(document).ready(function () {
+    var buttonObj = document.querySelector("button");
     $('#restart').click(function () {
         document.location.reload(true);       //Reload Page
+        buttonObj.textContent = "submit";
     });
     $('#formOne').submit(function () {
+        var buttonObj = document.querySelector("button");
+        buttonObj.textContent = "submitted";
         event.preventDefault();
         $("#toppingsDiv").hide();
         const planetsConvFactor = [0.24, 0.62, 1.00, 1.88, 11.86];
